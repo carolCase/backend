@@ -19,7 +19,7 @@ app.post("/api/saveScoreDataWithAxios", async (req, res) => {
   const { playerName, score } = req.body;
   const newScoreEntry = { playerName, score };
   try {
-    await axios.post("http:localhost:3001/api/saveScoreDta", newScoreEntry);
+    await axios.post("http:localhost:3001/api/saveScoreData", newScoreEntry);
     res.json({ success: true });
   } catch (error) {
     console.error("Error saving score", error);
